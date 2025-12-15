@@ -58,13 +58,13 @@ const KanbanTareas = () => {
       { id: 'recepcion-vehiculo', nombre: 'Recepción Vehículo', icono: <Car size={20} />, roles: ['admin'], path: '/servicio-taller' },
       { id: 'recepcion-laboratorio', nombre: 'Recepción Laboratorio', icono: <Microscope size={20} />, roles: ['admin'], path: '/servicio-taller' },
       { id: 'diagnostico-tecnico', nombre: 'Diagnóstico Técnico', icono: <Wrench size={20} />, roles: ['admin', 'mecanico'], path: '/servicio-taller' },
-      { id: 'diagnostico-ia', nombre: 'Diagnóstico con IA', icono: <Brain size={20} />, roles: ['admin', 'mecanico'], path: '/servicio-taller' },
       { id: 'cotizaciones', nombre: 'Cotizaciones', icono: <ClipboardList size={20} />, roles: ['admin'], path: '/servicio-taller' },
       { id: 'ordenes-trabajo', nombre: 'Órdenes de Trabajo', icono: <ClipboardList size={20} />, roles: ['admin', 'mecanico'], path: '/taller/ordenes' },
       { id: 'kanban-tareas', nombre: 'Kanban de Tareas', icono: <KanbanIcon size={20} />, roles: ['admin', 'mecanico'], path: '/taller/kanban' },
-      { id: 'kpis-taller', nombre: 'KPIs Taller', icono: <KanbanIcon size={20} />, roles: ['admin'], path: '/servicio-taller' },
-      { id: 'inventario-interno', nombre: 'Inventario Interno', icono: <KanbanIcon size={20} />, roles: ['admin'], path: '/servicio-taller' },
+      { id: 'diagnostico-ia', nombre: 'Diagnóstico con IA', icono: <Brain size={20} />, roles: ['admin', 'mecanico'], path: '/servicio-taller' },
+      { id: 'escaneo', nombre: 'Escaneo 3D', icono: <KanbanIcon size={20} />, roles: ['admin'], path: '/servicio-taller' },
       { id: 'gestion-usuarios', nombre: 'Gestión de Usuarios', icono: <Users size={20} />, roles: ['admin'], path: '/servicio-taller' },
+      { id: 'kpis-taller', nombre: 'KPIs Taller', icono: <KanbanIcon size={20} />, roles: ['admin'], path: '/servicio-taller' },
       { id: 'configuracion-taller', nombre: 'Configuración Taller', icono: <Settings size={20} />, roles: ['admin'], path: '/servicio-taller' }
     ];
 

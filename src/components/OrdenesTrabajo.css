@@ -374,3 +374,24 @@
     font-size: 24px;
   }
 }
+
+/* Estilos para los botones de acciones */
+.btn-icon-view {
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.btn-icon-view:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-icon-print {
+  color: #16a34a;
+  border-color: #16a34a;
+}
+
+.btn-icon-print:hover {
+  background: #16a34a;
+  color: white;
+}

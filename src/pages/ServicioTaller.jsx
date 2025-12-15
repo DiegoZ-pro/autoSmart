@@ -16,6 +16,7 @@ import { useAuth } from '../context/AuthContext';
 import { supabase } from '../config/supabase';
 import './ServicioTaller.css';
 import GestionUsuarios from '../components/GestionUsuarios';
+import Cotizaciones from '../components/Cotizaciones';
 
 const ServicioTaller = () => {
   const { profile } = useAuth();
@@ -55,13 +56,13 @@ const ServicioTaller = () => {
       { id: 'recepcion-vehiculo', nombre: 'Recepción Vehículo', icono: <Car size={20} />, roles: ['admin'] },
       { id: 'recepcion-laboratorio', nombre: 'Recepción Laboratorio', icono: <Microscope size={20} />, roles: ['admin'] },
       { id: 'diagnostico-tecnico', nombre: 'Diagnóstico Técnico', icono: <Wrench size={20} />, roles: ['admin', 'mecanico'] },
-      { id: 'diagnostico-ia', nombre: 'Diagnóstico con IA', icono: <Brain size={20} />, roles: ['admin', 'mecanico'] },
       { id: 'cotizaciones', nombre: 'Cotizaciones', icono: <ClipboardList size={20} />, roles: ['admin'] },
       { id: 'ordenes-trabajo', nombre: 'Órdenes de Trabajo', icono: <ClipboardList size={20} />, roles: ['admin', 'mecanico'], isRoute: true, path: '/taller/ordenes' },
       { id: 'kanban-tareas', nombre: 'Kanban de Tareas', icono: <Kanban size={20} />, roles: ['admin', 'mecanico'], isRoute: true, path: '/taller/kanban' },
-      { id: 'kpis-taller', nombre: 'KPIs Taller', icono: <Kanban size={20} />, roles: ['admin'] },
-      { id: 'inventario-interno', nombre: 'Inventario Interno', icono: <Kanban size={20} />, roles: ['admin'] },
+      { id: 'diagnostico-ia', nombre: 'Diagnóstico con IA', icono: <Brain size={20} />, roles: ['admin', 'mecanico'] },
+      { id: 'escaneo', nombre: 'Escaneo 3D', icono: <Brain size={20} />, roles: ['admin'] },
       { id: 'gestion-usuarios', nombre: 'Gestión de Usuarios', icono: <Users size={20} />, roles: ['admin'] },
+      { id: 'kpis-taller', nombre: 'KPIs Taller', icono: <Kanban size={20} />, roles: ['admin'] },
       { id: 'configuracion-taller', nombre: 'Configuración Taller', icono: <Wrench size={20} />, roles: ['admin'] }
     ];
 
@@ -243,7 +244,7 @@ const ServicioTaller = () => {
 
       setMensaje({ 
         tipo: 'exito', 
-        texto: `✅ Orden ${ordenNumero} creada exitosamente!` 
+        texto: `Orden ${ordenNumero} creada exitosamente!` 
       });
 
       setFormData({
@@ -724,6 +725,9 @@ const ServicioTaller = () => {
 
       case 'gestion-usuarios':
         return <GestionUsuarios />;
+
+      case 'cotizaciones':
+        return <Cotizaciones />;  
       
       default:
         return (
@@ -741,7 +745,7 @@ const ServicioTaller = () => {
     <div className="servicio-taller-page">
       <div className="taller-header">
         <div className="taller-header-content">
-          <h1>Servicio de Taller Freno Centro</h1>
+          <h1>Servicio de Taller</h1>
           <p>Sección Actual: {menuItems.find(item => item.id === seccionActual)?.nombre}</p>
         </div>
       </div>
